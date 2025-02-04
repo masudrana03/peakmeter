@@ -71,12 +71,12 @@ select_ram_test() {
     echo "7) Custom size"
     echo "Press Enter to skip testing."
 
-    read -p "Enter your choice (comma-separated for multiple): " choice
+    read -p "Enter your choice (comma-separated for multiple): " choice </dev/tty
 
     if [[ -z "$choice" ]]; then
         # User left it blank, ask for manual input
-        read -p "Enter RAM size to test (MB): " ram_size
-        read -p "How many times to test? " test_count
+        read -p "Enter RAM size to test (MB): " ram_size </dev/tty
+        read -p "How many times to test? " test_count </dev/tty
 
         if [[ -z "$ram_size" || -z "$test_count" ]]; then
             echo "No valid input. Skipping RAM test."
@@ -95,8 +95,8 @@ select_ram_test() {
         if [[ "$option" =~ ^[1-6]$ ]]; then
             sudo memtester "${sizes[$((option-1))]}M" 1
         elif [[ "$option" == "7" ]]; then
-            read -p "Enter custom RAM size (MB): " custom_size
-            read -p "How many times to test? " custom_count
+            read -p "Enter custom RAM size (MB): " custom_size </dev/tty
+            read -p "How many times to test? " custom_count </dev/tty
 
             if [[ -n "$custom_size" && -n "$custom_count" ]]; then
                 sudo memtester "${custom_size}M" "$custom_count"
