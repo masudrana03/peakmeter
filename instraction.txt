@@ -1,0 +1,19 @@
+# Instruction the prompt
+
+1. i have check which operating system i am using ?
+    a. if the os is linux ubuntu i wil check with memtester ( if is not install fist i we have to install this .)
+    b. if the os is mac if similar type of memtester use those . ( if those package is not have install that.)
+    c. like above other linux and mac test them.
+2. show the how many space is free on the ram show on the terminal
+3. now the check ram speed
+4. check ram details
+5. i have test the multiple step 
+    a. like as  sudo memtester 256M 1
+    b. like as  sudo memtester 512M 1
+    c. like as  sudo memtester 1024M 1
+    d. like as  sudo memtester 2048M 1
+    e. like as  sudo memtester 4096M 1
+    f. like as  sudo memtester 16384M 1
+ask for is the user whe mb to test
+
+and hare is my code which i have:
